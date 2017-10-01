@@ -14,7 +14,7 @@ object MovieSeed{
 case class Movie(
                   imdbId: String,
                   screenId: String,
-                  title: String,
+                  movieTitle: String,
                   reservedSeats: Int,
                   availableSeats: Int
                 )

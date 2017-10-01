@@ -46,7 +46,7 @@ class DefaultMoviesDao @Inject()(query: MoviesQuery,
               Movie(
                 imdbId = row.imdbId: String,
                 screenId = row.screenId: String,
-                title = row.title: String,
+                movieTitle = row.movieTitle: String,
                 reservedSeats = row.reservedSeats: Int,
                 availableSeats = row.availableSeats: Int
               )
@@ -60,7 +60,7 @@ class DefaultMoviesDao @Inject()(query: MoviesQuery,
     import obj._
     db.run(query += MovieRow(imdbId: String,
       screenId: String,
-      title: String,
+      movieTitle: String,
       availableSeats: Int,
       reservedSeats: Int)).map(_ => Omit)
       .recoverWith{

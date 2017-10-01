@@ -36,7 +36,7 @@ class Specs extends PlaySpec with Injecting {
       inject[MoviesEngine].get(imdbId = "tt0816692", screenId = "screen_12345").await.get mustEqual
         Movie(imdbId = "tt0816692",
           screenId = "screen_12345",
-          title = "Interstellar",
+          movieTitle = "Interstellar",
           availableSeats = 88,
           reservedSeats = 0)
 
@@ -47,7 +47,7 @@ class Specs extends PlaySpec with Injecting {
       inject[MoviesEngine].get(imdbId = "tt0816692", screenId = "screen_12345").await.get mustEqual
         Movie(imdbId = "tt0816692",
           screenId = "screen_12345",
-          title = "Interstellar",
+          movieTitle = "Interstellar",
           availableSeats = 88,
           reservedSeats = 1)
     }

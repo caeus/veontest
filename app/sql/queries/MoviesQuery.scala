@@ -13,7 +13,7 @@ class MoviesQuery @Inject()() extends TableQuery(new MovieSchema(_))
 case class MovieRow(
                      imdbId: String,
                      screenId: String,
-                     title: String,
+                     movieTitle: String,
                      availableSeats: Int,
                      reservedSeats: Int
                    )
@@ -25,7 +25,7 @@ class MovieSchema(tag: Tag) extends Table[MovieRow](tag, "movie") {
 
   def screenId = column[String]("screen_id")
 
-  def title = column[String]("title")
+  def movieTitle = column[String]("movie_title")
 
   def availableSeats = column[Int]("available_seats")
 
@@ -36,7 +36,7 @@ class MovieSchema(tag: Tag) extends Table[MovieRow](tag, "movie") {
 
   override def * : ProvenShape[MovieRow] = (imdbId,
     screenId,
-    title,
+    movieTitle,
     availableSeats,
     reservedSeats) <> (MovieRow.tupled, MovieRow.unapply)
 }

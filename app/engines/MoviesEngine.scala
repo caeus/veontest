@@ -29,7 +29,7 @@ class MoviesEngine @Inject()(dao: MoviesDao,
           dao.create(Movie(
             imdbId = imdbId: String,
             screenId = screenId: String,
-            title = title: String,
+            movieTitle = title: String,
             availableSeats = availableSeats: Int,
             reservedSeats = 0: Int
           ))
