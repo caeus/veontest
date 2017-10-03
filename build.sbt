@@ -13,8 +13,7 @@ libraryDependencies ++= Seq(
   "org.jsoup" % "jsoup" % "1.10.3",
   "org.scalatestplus.play" %% "scalatestplus-play" % "3.0.0" % Test,
   "com.typesafe.play" %% "play-slick" % "3.0.0",
-  "com.typesafe.play" %% "play-slick-evolutions" % "3.0.0",
-  "com.github.tototoshi" %% "scala-csv" % "1.3.4",
+  "com.typesafe.play" %% "play-slick-evolutions" % "3.0.0"
   "com.github.tminglei" %% "slick-pg" % "0.15.0",
   guice
 )
